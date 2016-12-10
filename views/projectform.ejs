@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="javascript.js"></script>
+</head>
+<body>
+<ul class="runners">
+  <% for(var i=0; i<runners.length; i++) {%>
+    <li class="runners">
+      <span><%= runners[i].name %></span>
+      <span><%= runners[i].year %></span>
+      <span><%= runners[i].type %></span>
+    </li>
+  <% } %>
+</ul>
+    <p>Create Runner</p>
+  <form action="/create" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="year" name="year">
+    <input type="text" placeholder="type" name="type">
+    <button type="submit">Submit</button>
+  </form>
+  <br>
+  <button id="edit">Change An Empty Name</button>
+  <button id="delete">Remove Runners</button>
+</html>
+
